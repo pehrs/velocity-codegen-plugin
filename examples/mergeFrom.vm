@@ -1,0 +1,8 @@
+public void mergeFrom($class.getName() from) {
+#foreach($field in $fields)
+#if(!$field.isStatic())
+    this.set$StringUtils.capitalize($field.getName())(from.get$StringUtils.capitalize($field.getName())());
+#end
+#end
+}
+

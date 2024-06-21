@@ -1,0 +1,40 @@
+
+// Variables:
+// class.getName():    $class.getName()
+// date: $date
+// #[[$javaVersion]]#:        $javaVersion
+// #[[$javaVersion.feature]]#:        $javaVersion.feature
+// javaFeatureVersion: $javaFeatureVersion
+// javaMinorVersion:   $javaMinorVersion
+// javaUpdateVersion:  $javaUpdateVersion
+
+// StringUtils         - https://commons.apache.org/proper/commons-lang/javadocs/api-3.3/org/apache/commons/lang3/StringUtils.html
+
+//
+// FIELDS:
+// #[[#foreach($field in $fields)]]#
+//
+#foreach($field in $fields)
+// --------------------------------------
+//
+// $field.getType() $field.getName()
+//
+// #[[$field.getType()]]#     = $field.getType()
+// #[[$field.getName()]]#     = $field.getName()
+// #[[$field.isStatic()]]#    = $field.isStatic()
+// #[[$field.isPublic()]]#    = $field.isPublic()
+// #[[$field.isProtected()]]# = $field.isProtected()
+// #[[$field.isPrivate()]]#   = $field.isPrivate()
+// #[[$field.isArray()]]#     = $field.isArray()
+// #[[$field.isCollection()]]#= $field.isCollection()
+// #[[$field.isSet()]]#       = $field.isSet()
+// #[[$field.isList()]]#      = $field.isList()
+#if(!$field.isStatic())
+//
+// Sample code
+// #[[this.set$StringUtils.capitalize($field.getName())(from.get$StringUtils.capitalize($field.getName())());]]#
+// this.set$StringUtils.capitalize($field.getName())(from.get$StringUtils.capitalize($field.getName())());
+#end
+//
+#end
+
