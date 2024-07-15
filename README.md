@@ -1,5 +1,10 @@
 # velocity-codegen-plugin
 
+Deprecated!!!
+I have refactored this plugin to use freemarker in stead, as it's impossible to get 
+Velocity to work properly in a Intellij plugin without messing up the embedded Intellij velocity.
+Please use the [freemarker-generator-plugin](https://github.com/pehrs/freemarker-generator-plugin) instead.
+
 This Intellij plugin enables you to inject code into 
 Java classes via <a href="https://velocity.apache.org/engine/1.7/">Velocity templates</a>
 
